@@ -14,7 +14,7 @@ const sendEmail = async ({ email, subject, text, html }) => {
     });
 
     const mailOptions = {
-      from: `SheyEvents <${process.env.NODEMAILER_EMAIL}>`,
+      from: `NITSEvents <${process.env.NODEMAILER_EMAIL}>`,
       to: email,
       subject,
       text,

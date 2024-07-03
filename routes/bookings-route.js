@@ -37,7 +37,7 @@ router.post("/create-booking", validateToken, async (req, res) => {
     const userObj = await UserModel.findById(req.user._id);
     const emailPayload = {
       email: userObj.email,
-      subject: "Booking Confirmation - SheyEvents",
+      subject: "Booking Confirmation - NITSEvents",
       text: `You have successfully booked ${req.body.ticketsCount} ticket(s) for ${event.name}.`,
       html: ``,
     };
@@ -111,7 +111,7 @@ router.post("/cancel-booking", validateToken, async (req, res) => {
       const userObj = await UserModel.findById(req.user._id);
       const emailPayload = {
         email: userObj.email,
-        subject: "Booking Cancellation - SheyEvents",
+        subject: "Booking Cancellation - NITSEvents",
         text: `You have successfully cancelled your booking for ${event.name}.`,
         html: ``,
       };
